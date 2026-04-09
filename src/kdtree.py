@@ -1,7 +1,6 @@
 #
-#
 # Gina G. Healy
-# K-d tree 
+# KD tree 
 #
 # |- src/kdtree.py
 # |- examples/demo.py
