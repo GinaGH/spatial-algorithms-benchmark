@@ -29,13 +29,18 @@ Linear scan across all points.
 - Build time: O(1)
 - Query time: O(n)
 
-## Planned Work
+## Current Status
 
-- [ ] Implement KD-tree construction
-- [ ] Add nearest-neighbor search
+Implemented:
+- balanced KD-tree construction
+- nearest-neighbor search
+- brute-force nearest-neighbor baseline
+- initial benchmarking
+- basic correctness test
+  
+## Planned Work
 - [ ] Add k-nearest neighbors
 - [ ] Add range queries
-- [ ] Benchmark vs brute force
 - [ ] Add visualization (2D)
 
 ## Tech
