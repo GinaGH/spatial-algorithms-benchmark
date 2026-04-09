@@ -2,6 +2,9 @@
 # Gina G. Healy
 # KD-tree 
 #
+# |- src/kdtree.py
+# |- examples/demo.py
+# 
 
 class KDNode:
     def __init__(self, point, axis, left=None, right=None):
