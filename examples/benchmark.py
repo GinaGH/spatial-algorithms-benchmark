@@ -1,6 +1,6 @@
 #
 # Gina G. Healy
-# K-d tree demo
+# KD tree benchmark 
 #
 # |- src/kdtree.py
 # |- examples/benchmark.py
