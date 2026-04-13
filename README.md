@@ -4,8 +4,7 @@ This project explores spatial data structures and their performance characterist
 
 ## Motivation
 
-Efficient spatial search is fundamental in computational geometry, simulation, machine learning, and scientific computing. This project investigates how algorithmic design impacts performance as data scales.
-
+Efficient spatial search is fundamental in computational geometry, simulation, machine learning, and scientific computing. This project investigates how algorithmic design impacts performance as data scales. 
 ## Features
 
 - KD-tree construction (balanced)
@@ -21,18 +20,20 @@ Efficient spatial search is fundamental in computational geometry, simulation, m
 A binary space-partitioning structure that recursively splits points along alternating axes.
 
 - Build time: O(n log n)
-- Query time: average-case sublinear
+- Query time:
+  - Average-case: O(log n) (low dimensions)
+  - Worst-case: O(n)
 
 ### Brute-force
 Linear scan across all points.
 
-- Build time: O(1)
+- Preprocessing time: O(1) (no indexing structure)
 - Query time: O(n)
 
 ## Current Status
 
 Implemented:
-- balanced KD-tree construction
+- KD-tree construction (median-split, balanced)
 - nearest-neighbor search
 - brute-force nearest-neighbor baseline
 - initial benchmarking
