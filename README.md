@@ -9,10 +9,11 @@ Efficient spatial search is fundamental in computational geometry, simulation, m
 
 - KD-tree construction (balanced)
 - Nearest-neighbor search
-- k-nearest neighbors
-- Range queries
+- k-nearest neighbors (planned)
+- Range queries (planned)
 - Performance comparison with brute-force search
 - Scaling experiments (small → large datasets)
+- Add visualization (2D) (planned)
 
 ## Algorithms
 
@@ -47,7 +48,6 @@ Implemented:
 ## Tech
 
 - Python (initial implementation)
-- NumPy (optional)
 - Matplotlib (for visualization)
 
 ## Future Work
