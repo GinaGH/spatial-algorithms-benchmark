@@ -19,7 +19,7 @@ Efficient spatial search is fundamental in computational geometry, simulation, m
 ### KD-tree
 A binary space-partitioning structure that recursively splits points along alternating axes.
 
-- Build time: O(n log n)
+- Build time: O(n log^2 n)
 - Query time:
   - Average-case: O(log n) (low dimensions)
   - Worst-case: O(n)
