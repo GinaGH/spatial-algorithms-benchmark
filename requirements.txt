@@ -1,0 +1,5 @@
+# Graphics and Visualization
+matplotlib
+
+# Testing and Verification
+pytest
