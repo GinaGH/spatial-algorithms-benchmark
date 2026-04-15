@@ -1,33 +1,38 @@
 #
-# Gina G. Healy
 # KD tree demo
 #
-# |- src/kdtree.py
-# |- examples/demo.py
-# 
 
 import sys
-import os
-from kdtree import build_kdtree, nearest_neighbor
 import random
 
-# 1. Get the directory where your current script is located
-current_dir = os.path.dirname(os.path.abspath(__file__))
+from pathlib import Path
 
-# 2. Go up one level and then into the 'src' folder
-src_path = os.path.join(current_dir, '..', 'src')
+# --- Environment Setup ---
+# Locate the project root so we can import the 'src' folder
+# This allows the demo to run from anywhere within the repository
+PROJECT_ROOT = Path(__file__).resolve().parents[1]
+sys.path.append(str(PROJECT_ROOT))
 
-# 3. Add that calculated path to Python's search list
-sys.path.append(os.path.abspath(src_path))
+# Import core KD-Tree functionality
+from src.kdtree import build_kdtree, nearest_neighbor
 
-# Construct a k-d tree 
+# 1. Setup Sample Data
+# Generate a small set of 20 random 2D points for demonstration
 points = [(random.random(), random.random()) for _ in range(20)]
-tree = build_kdtree(points)
-print("KD-tree constructed with", len(points), "points")
 
-# find the nearest neighbor to the target point
+# 2. Build the Tree
+# The build_kdtree function organizes points for efficient spatial querying
+tree = build_kdtree(points)
+print("KD-Tree constructed with", len(points), "points")
+
+# 3. Perform a Search 
+# Find the nearest neighbor to the target point
+# defined at the center of the unit square
 target = (0.5, 0.5)
 nn = nearest_neighbor(tree, target)
 
-print("Target:", target)
-print("Nearest neighbor:", nn)
+# 4. Display Results
+print("-" * 30)
+print(f"    Target Point:   {target}")
+print(f"Nearest Neighbor:   {nn}")
+print("-" * 30)
