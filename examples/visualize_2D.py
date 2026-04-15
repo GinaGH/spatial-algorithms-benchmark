@@ -1,4 +1,3 @@
-
 #
 # KD-Tree Visualization (2D)
 # --------------------------
@@ -58,16 +57,18 @@ def main():
     plt.plot(
         [target[0], nn[0]],
         [target[1], nn[1]],
+        color='blue',
         linestyle="--",
-        linewidth=1
+        linewidth=1,
+        label="Distance Path"
     )
 
     # Customize the Plot
-    plt.title("KD-Tree Nearest Neighbor Search")
-    plt.xlabel("x")
-    plt.ylabel("y")
+    plt.title("KD-Tree Nearest Neighbor Search (2D Visualization)")
+    plt.xlabel("X-Axis")
+    plt.ylabel("Y-Axis")
     plt.legend()
-    plt.grid(True)
+    plt.grid(True, linestyle=':', alpha=0.6)
     plt.show()
 
 
